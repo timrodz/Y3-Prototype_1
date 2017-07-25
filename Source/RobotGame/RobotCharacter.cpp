@@ -149,6 +149,7 @@ void ARobotCharacter::RestoreArmTick(FName bone, float fDeltaTickX)
 		Animation->SkelControl_LeftUpperArmRot = FRotator::ZeroRotator;
 		Animation->RestoreArm = false;
 		Animation->LostArm = false;
+		RestoreArmTime = 0.0f;
 
 		UE_LOG(LogTemp, Warning, TEXT("Finished"));
 
