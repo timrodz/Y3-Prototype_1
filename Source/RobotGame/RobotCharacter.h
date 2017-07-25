@@ -40,13 +40,13 @@ public:
 		void RestoreLegs();
 
 
-	UPROPERTY(BlueprintReadWrite, Category = "Bones")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bones")
 		FName UpperArm_L;
-	UPROPERTY(BlueprintReadWrite, Category = "Bones")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bones")
 		FName UpperArm_R;
-	UPROPERTY(BlueprintReadWrite, Category = "Bones")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bones")
 		FName Leg_L;
-	UPROPERTY(BlueprintReadWrite, Category = "Bones")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Bones")
 		FName Leg_R;
 
 
