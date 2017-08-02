@@ -11,8 +11,6 @@ ARobotCharacter::ARobotCharacter()
 
 void ARobotCharacter::ReleaseBone(FName bone)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Your asdfadsf"));
-
 	USkeletalMeshComponent* Skeleton = GetMesh();
 
 	if (bone == "upperarm_l")
