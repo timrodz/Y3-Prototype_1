@@ -17,18 +17,20 @@ void ARobotCharacter::ReleaseBone(FName bone)
 
 	if (bone == "upperarm_l")
 	{
-		UpArmL_Origin = Skeleton->GetSocketTransform(bone);
-		
-		UE_LOG(LogTemp, Warning, TEXT("Origin of upperarm_l = %s"), *UpArmL_Origin.ToString());
 
-		UCustomAnimInstance * Animation =
-			Cast<UCustomAnimInstance>(Skeleton->GetAnimInstance());
-
-		//No Anim Instance Acquired?
-		if (!Animation) return;
-
-		Animation->LostArm = true;
 	}
+
+	UpArmL_Origin = Skeleton->GetSocketTransform(bone);
+		
+	UE_LOG(LogTemp, Warning, TEXT("Origin of upperarm_l = %s"), *UpArmL_Origin.ToString());
+
+	UCustomAnimInstance * Animation =
+		Cast<UCustomAnimInstance>(Skeleton->GetAnimInstance());
+
+	//No Anim Instance Acquired?
+	if (!Animation) return;
+
+	Animation->LostArm = true;
 
 	//Skeleton->SetAllBodiesSimulatePhysics(true);
 	Skeleton->SetAllBodiesBelowSimulatePhysics(bone, true, true);
